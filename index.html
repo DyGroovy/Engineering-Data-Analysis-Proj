@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stem and Leaf Plot Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include the CSS file for the background animation -->
+    <link rel="stylesheet" href="TryGumagalaw.css">
+</head>
+<body>
+    <!-- Background Animation HTML -->
+    <div class="bgAnimation" id="bgAnimation">
+        <div class="backgroundAmim"></div>
+    </div>
+
+    <!-- Calculator Container -->
+    <div id="calculatorContainer">
+        <div id="app">
+            <h1>Stem and Leaf Plot Calculator</h1>
+            <!-- Calculator content goes here -->
+            <textarea id="dataInput" placeholder="Enter data separated by commas"></textarea>
+            <button onclick="generatePlot()">Generate Plot</button>
+            <table id="errorTable" style="display: none;">
+                <tr><td id="errorMessages"></td></tr>
+            </table>
+            <div id="stemAndLeafPlot">
+                <h2>Stem and Leaf Plot</h2>
+            </div>
+            <div id="statistics">
+                <h2>Statistics Table</h2>
+                <div id="statisticsTable" style="display: none;">
+                    <!-- Statistics table content will be added dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div id="frequencyContainer">
+            <div id="frequencyTable">
+                <h2>Frequency Table</h2>
+                <table id="frequencyDataTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody id="frequencyDataBody">
+                        <!-- Frequency table content will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>  
+
+            <div id="frequencyChartContainer">
+                <h2>Frequency Chart</h2>
+                <canvas id="frequencyChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include the JavaScript file for the background animation -->
+    <script src="TryGumagalaw.js"></script>
+    <!-- Include the JavaScript file for the calculator -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

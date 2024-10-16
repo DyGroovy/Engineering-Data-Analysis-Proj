@@ -1,0 +1,130 @@
+body {
+    font-family: "Inter";
+    font-style: large;
+    margin: 20px;
+}
+
+#app {
+    max-width: 800px;
+    margin: 0;
+    margin-left: 85px;
+    float: left;
+    position: relative;
+    border: 2px solid black;
+    padding: 10px;
+        background-color: rgba(255, 255, 255, 0.8); /* Make the background opaque */
+    z-index: 2; /* Ensure it's above the background animation */
+}
+
+#app::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    z-index: -1;
+    background-color: rgb(255, 255, 255);
+}
+
+textarea {
+    width: 99%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#stemAndLeafPlot,
+#statistics,
+#errorTable {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    background-color: white;
+}
+
+#errorMessages {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#statisticsTable,
+#frequencyDataTable {
+    display: none;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+#statisticsTable th,
+#statisticsTable td,
+#frequencyDataTable th,
+#frequencyDataTable td {
+    padding: 8px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+#statisticsTable th,
+#frequencyDataTable th {
+    background-color: #f2f2f2;
+}
+
+#frequencyContainer {
+    display: flex;
+    margin-top: 20px;
+    position: relative; /* Ensure it's positioned relative to the parent */
+    z-index: 1; /* Ensure it's above the background */
+}
+
+#frequencyTable {
+    margin-top: 0px;
+    margin-left: 110px;
+    padding: 10px;
+    border: 1px solid #000000;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    width: 40%;
+    z-index: 2; /* Position above the background */
+}
+
+#frequencyChartContainer {
+    margin-top: 0px;
+    margin-left: 80px;
+    padding: 15px;
+    border: 1px solid #000000;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    height: 300px;
+    overflow: auto;
+    z-index: 2; /* Position above the background */
+}
+
+#frequencyChart {
+    height: calc(75%);
+    width: calc(99%);
+    border: 1px solid #000000;
+    background-color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    #app {
+        max-width: 90%; /* Added: Adjust max-width for smaller screens */
+    }
+}
